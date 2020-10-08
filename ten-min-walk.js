@@ -18,13 +18,13 @@ empty array (that's not a walk, that's standing still!)*/
 function isValidWalk(walk) {
     let walkLimit  = 10;
     let myWalkTime = 0;
-    for(i = 0; i <= walk.length-1; i++){
+    walk.forEach(function(){
       myWalkTime++
-      console.log(myWalkTime)
-    }
+    })
+    console.log(myWalkTime)
     return myWalkTime <= walkLimit;
   }
 
 
 
-  console.log(!isValidWalk(['w']))
+  console.log(!isValidWalk(['n','n','n','s','n','s','n','s','n','s']))
