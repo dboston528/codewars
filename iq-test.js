@@ -22,22 +22,24 @@ iqTest("1 2 1 1") => 2 // Second number is even, while the rest of the numbers a
 */
 
 function iqTest(numbers){
-    let numbersArray = numbers.split(' ')
-    let  evenNum = 0
-    let  oddNum = 0
-    numbersArray.forEach(element => {
-        if(element % 2 === 0){
-            evenNum++
-        } else {
-            oddNum++
-        }           
-        }) 
-
-        console.log(evenNum)
-        console.log(oddNum)
-
-
-    }
+    // ...
+    let an = numbers.split(" ")
+    let odd = []
+    let even = []
+    
+    an.forEach(function(item, index){
+      if(item %2 === 0){
+        even.push(item)
+      }else {
+        odd.push(item)
+      } 
+    })
+    
+    console.log(even)
+    
+  }
+  
+  iqTest("2 4 7 8 10")
 
   iqTest("2 4 7 8 10")
   
