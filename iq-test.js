@@ -22,7 +22,6 @@ iqTest("1 2 1 1") => 2 // Second number is even, while the rest of the numbers a
 */
 
 function iqTest(numbers){
-    // ...
     let an = numbers.split(" ")
     let odd = []
     let even = []
@@ -32,14 +31,22 @@ function iqTest(numbers){
         even.push(item)
       }else {
         odd.push(item)
-      } 
+      }
     })
-    
-    console.log(even)
-    
+    if(odd.length === 1){
+        let match = odd[0]
+        let position =  an.findIndex(function(item){
+        return item === match
+       })
+    return position + 1 
+    } else if (even.length === 1){
+        let match = even[0]
+        let position =  an.findIndex(function(item){
+        return item === match
+       })
+       return position + 1 
+    }
   }
-  
-  iqTest("2 4 7 8 10")
 
-  iqTest("2 4 7 8 10")
+  console.log(iqTest("1 2 1 1"))
   
