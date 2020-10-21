@@ -8,7 +8,7 @@ function isValidIP(str) {
     } else {
       split.forEach(function(item){
         console.log(parseInt(item))
-        if (parseInt(item)){
+        if (parseInt(item)===NaN){
             return false
           }
         if(parseInt(item) > 255 || parseInt(item) < 0) {
@@ -16,7 +16,7 @@ function isValidIP(str) {
         }
       })
     }
-    return true;
+    // return true;
   }
 
-  console.log(isValidIP('abc.def.ghi.jkl'))
+  console.log(isValidIP('l23.233.565.657'))
